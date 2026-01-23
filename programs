@@ -1,0 +1,42 @@
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    division = a//b;
+    print(division)
+    division = a/b;
+    print(division)
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    sum = a + b;
+    print(sum)
+    difference = a - b;
+    print(difference)
+    product = a * b;
+    print(product)
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    # Check if n is odd
+    if n % 2 != 0:
+        print("Weird")
+    else:
+        # n is even, now check the ranges
+        if 2 <= n <= 5:
+            print("Not Weird")
+        elif 6 <= n <= 20:
+            print("Weird")
+        elif n > 20:
+            print("Not Weird")
+
