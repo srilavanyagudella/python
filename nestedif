@@ -1,0 +1,26 @@
+if __name__ == '__main__':
+    # Initialize an empty list to store student data
+    students = []
+    
+    # Input handling
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        students.append([name, score])
+
+    # 1. Extract all scores and find the unique values using a set
+    # 2. Sort those unique scores to find the second lowest easily
+    unique_scores = sorted(list(set([s[1] for s in students])))
+    
+    # The second element (index 1) is the second lowest grade
+    second_lowest_grade = unique_scores[1]
+    
+    # 3. Collect names of students who have this specific grade
+    low_finalists = [s[0] for s in students if s[1] == second_lowest_grade]
+    
+    # 4. Sort the names alphabetically as per requirements
+    low_finalists.sort()
+    
+    # 5. Print each name on a new line
+    for name in low_finalists:
+        print(name)
