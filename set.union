@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    # 1. Read English subscription count (n)
+    n = int(input())
+    # 2. Read English roll numbers and convert to a set
+    english_set = set(map(int, input().split()))
+    
+    # 3. Read French subscription count (b)
+    b = int(input())
+    # 4. Read French roll numbers and convert to a set
+    french_set = set(map(int, input().split()))
+    
+    # 5. Use the .union() method (or the | operator)
+    # This combines both sets and removes any duplicates
+    at_least_one = english_set.union(french_set)
+    
+    # 6. Print the total number of unique students
+    print(len(at_least_one))
