@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    # Python 2 uses raw_input() for strings
+    n = int(raw_input())
+    
+    # map(int, ...) converts the strings to integers
+    # then we wrap it in a tuple()
+    t = tuple(map(int, raw_input().split()))
+    
+    # Print the hash (No parentheses needed for print in Python 2)
+    print hash(t)
