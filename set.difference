@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    # 1. Read English subscription count
+    n = int(input())
+    # 2. Read English roll numbers into a set
+    english_set = set(map(int, input().split()))
+    
+    # 3. Read French subscription count
+    b = int(input())
+    # 4. Read French roll numbers into a set
+    french_set = set(map(int, input().split()))
+    
+    # 5. Use .difference() to find students ONLY in the English set
+    # This subtracts the French students from the English set
+    only_english = english_set.difference(french_set)
+    
+    # 6. Print the count
+    print(len(only_english))
