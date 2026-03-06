@@ -1,0 +1,15 @@
+if __name__ == '__main__':
+    # 1. Read English subscription data
+    n = int(input())
+    english_set = set(map(int, input().split()))
+    
+    # 2. Read French subscription data
+    b = int(input())
+    french_set = set(map(int, input().split()))
+    
+    # 3. Use .symmetric_difference() (or the ^ operator)
+    # This keeps elements in E or F, but NOT in both
+    exclusive_students = english_set.symmetric_difference(french_set)
+    
+    # 4. Print the result
+    print(len(exclusive_students))
