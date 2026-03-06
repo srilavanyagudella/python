@@ -1,0 +1,16 @@
+if __name__ == '__main__':
+    # 1. English subscription count (n)
+    n = int(input())
+    # 2. Convert English roll numbers into a set
+    english_set = set(map(int, input().split()))
+    
+    # 3. French subscription count (b)
+    b = int(input())
+    # 4. Convert French roll numbers into a set
+    french_set = set(map(int, input().split()))
+    
+    # 5. Use .intersection() to find elements present in BOTH sets
+    both_subscriptions = english_set.intersection(french_set)
+    
+    # 6. Print the count of students in the intersection
+    print(len(both_subscriptions))
